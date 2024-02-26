@@ -3,6 +3,7 @@ import Card from './card'
 import { motion } from 'framer-motion'
 const Cards = () => {
 
+
 const cardInfo= [ { name: 'burger' , src: '/burger.jpg'},
 { name: 'lady' , src: '/lady.jpg'},{ name: 'pizza' , src: '/pizza.jpg'}
 ,{ name: 'man' , src: '/image4.jpg'}

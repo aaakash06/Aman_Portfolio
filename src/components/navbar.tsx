@@ -1,7 +1,14 @@
 import React from "react";
 import Link from "next/link";
 import { easeOut, motion } from "framer-motion";
-const NavBar = ({ handleOnClick }) => {
+
+
+interface Props{
+handleOnClick : ()=> void
+
+}
+
+const NavBar:React.FC<Props> = ({ handleOnClick }) => {
 
 const navBarAnimation = {
 hidden: { y:-30 , opacity: 0 },
@@ -17,7 +24,7 @@ show: { y: 0 , opacity: 1 , transition: { duartion: 1 , ease: easeOut  }}
           onClick={handleOnClick}
         ></div>
         <span className="tracking-wider font-extrabold max-sm:hidden dark:text-white">
-          AMAN'S PORTFOLIO
+          AMAN&apos;S PORTFOLIO
         </span>
       </div> 
       <div className="right flex gap-6 max-sm:text-sm max-sm:gap-2">

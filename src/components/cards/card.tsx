@@ -1,15 +1,26 @@
 import React from "react";
 import {motion} from 'framer-motion'
-import Arrow from '@/../public/arrow.svg'
 
-const Card = ({ info,variants }) => {
+
+interface Info{
+name: string,
+src: string
+
+}
+
+interface Props {
+  info: Info,
+
+}
+
+const Card: React.FC<Props> = ({ info }) => {
   const child = {
     hidden: { opacity: 0, y:30, scale:0.9 }
     , show: { opacity : 1 , y: 0, scale:1,
       transition:{ duration:.4, delay:.5 , ease:"easeOut" }
     }
     }
-  const {src} = info; 
+  const src  = info.src; 
   return (
     <motion.div variants={child} viewport={{once:true}} initial='hidden' whileInView='show'   className=" w-[100%] h-[400px] bg-zinc-200 max-w-[100%] rounded-[5%]  overflow-hidden  lg:h-[500px] md:h-[600px] "   >
   
